@@ -1,0 +1,127 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "cmake@latest": {
+      "last_modified": "2023-09-27T18:02:17Z",
+      "resolved": "github:NixOS/nixpkgs/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9#cmake",
+      "source": "devbox-search",
+      "version": "3.26.4",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/2jxr49h8mx20079xvgrzicwk1cfnl0cl-cmake-3.26.4"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/y749glp3j8x5dkmr5rbi9li6vpwj3iwy-cmake-3.26.4"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/zb41b8ydiacljd0cz9p7b11az01sda6r-cmake-3.26.4"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/yi235g10sp8jx939zpfli0s74154ph3v-cmake-3.26.4"
+        }
+      }
+    },
+    "coreutils-prefixed@latest": {
+      "last_modified": "2023-09-27T18:02:17Z",
+      "resolved": "github:NixOS/nixpkgs/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9#coreutils-prefixed",
+      "source": "devbox-search",
+      "version": "9.3",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/20ix1jvdrdp4p3l48yfvi16jkq7iy9ix-coreutils-9.3"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/18hrbdaa8lyhgwsnb0l3aplnyn779p2n-coreutils-9.3"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/cm1sqyn0xnwhk11cq6d56jaylfny8w62-coreutils-9.3"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/qlgs81zxc10inq4p44pfxibhf3jyf6n8-coreutils-9.3"
+        }
+      }
+    },
+    "gcc@latest": {
+      "last_modified": "2023-09-27T18:02:17Z",
+      "resolved": "github:NixOS/nixpkgs/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9#gcc13",
+      "source": "devbox-search",
+      "version": "13.2.0",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/9y5z6hys1dp9fsn9iwh96n3y4mzr49dy-gcc-wrapper-13.2.0"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/060xpczv2c9x5hgakvrjlahacppygag6-gcc-wrapper-13.2.0"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/2bf9nr233drw86z518pakcqkwm3vqhyj-gcc-wrapper-13.2.0"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/3779srln4c6qfgvdx09nx3qawwxswmaa-gcc-wrapper-13.2.0"
+        }
+      }
+    },
+    "gnumake@latest": {
+      "last_modified": "2023-09-27T18:02:17Z",
+      "resolved": "github:NixOS/nixpkgs/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9#gnumake",
+      "source": "devbox-search",
+      "version": "4.4.1",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/221p2yp3dlb6dxr93iidq4gpx9i25n81-gnumake-4.4.1"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/7j6z1qfnwbl6ixa7gwki112hp1rk7f55-gnumake-4.4.1"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/gy3qhhljpwjhmn6s4l2hnwh1nwg0p779-gnumake-4.4.1"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/5rdxplg3cczslq4banvk3449ry5k9hx7-gnumake-4.4.1"
+        }
+      }
+    },
+    "poetry@latest": {
+      "last_modified": "2023-10-04T02:19:08Z",
+      "plugin_version": "0.0.3",
+      "resolved": "github:NixOS/nixpkgs/d1c9180c6d1f8fce9469436f48c1cb8180d7087d#poetry",
+      "source": "devbox-search",
+      "version": "1.6.1",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/i7q6kxa3ac7c57zalr4vwa04c1bll3xd-python3.10-poetry-1.6.1"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/b0gmqd0y5pich25mk5p649g1bbbyxp0v-python3.10-poetry-1.6.1"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/q5zqqp3k58z46q4imgmj5pxbinmzjyqf-python3.10-poetry-1.6.1"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/6v2zvmag2il359sbd8j1q7b3c20gs6yd-python3.10-poetry-1.6.1"
+        }
+      }
+    },
+    "python3@latest": {
+      "last_modified": "2023-10-06T07:35:11Z",
+      "plugin_version": "0.0.1",
+      "resolved": "github:NixOS/nixpkgs/a2eb207f45e4a14a1e3019d9e3863d1e208e2295#python3",
+      "source": "devbox-search",
+      "version": "3.10.12",
+      "systems": {
+        "aarch64-darwin": {
+          "store_path": "/nix/store/g5cm6iik6p4k39cj9k7a6sg2p09hl7wf-python3-3.10.12"
+        },
+        "aarch64-linux": {
+          "store_path": "/nix/store/idpjrasbr9n8kij11s5mphrw770sf13s-python3-3.10.12"
+        },
+        "x86_64-darwin": {
+          "store_path": "/nix/store/aa3nnkfyif67k6861vd77g4cm4rgbqh8-python3-3.10.12"
+        },
+        "x86_64-linux": {
+          "store_path": "/nix/store/pzf6dnxg8gf04xazzjdwarm7s03cbrgz-python3-3.10.12"
+        }
+      }
+    }
+  }
+}

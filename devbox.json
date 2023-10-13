@@ -1,0 +1,20 @@
+{
+  "packages": [
+    "python3@latest",
+    "poetry@latest",
+    "coreutils-prefixed@latest",
+    "cmake@latest",
+    "gcc@latest",
+    "gnumake@latest"
+  ],
+  "shell": {
+    "init_hook": [
+      "poetry shell"
+    ],
+    "scripts": {
+      "test": [
+        "echo \"Error: no test specified\" && exit 1"
+      ]
+    }
+  }
+}
