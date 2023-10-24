@@ -2,15 +2,12 @@
   "packages": [
     "python3@latest",
     "poetry@latest",
+    "gnumake@latest",
     "coreutils-prefixed@latest",
-    "cmake@latest",
-    "gcc@latest",
-    "gnumake@latest"
+    "cmake@latest"
   ],
   "shell": {
-    "init_hook": [
-      "poetry shell"
-    ],
+    "init_hook": [],
     "scripts": {
       "test": [
         "echo \"Error: no test specified\" && exit 1"

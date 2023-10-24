@@ -41,49 +41,15 @@
         }
       }
     },
-    "gcc@latest": {
-      "last_modified": "2023-09-27T18:02:17Z",
-      "resolved": "github:NixOS/nixpkgs/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9#gcc13",
-      "source": "devbox-search",
-      "version": "13.2.0",
-      "systems": {
-        "aarch64-darwin": {
-          "store_path": "/nix/store/9y5z6hys1dp9fsn9iwh96n3y4mzr49dy-gcc-wrapper-13.2.0"
-        },
-        "aarch64-linux": {
-          "store_path": "/nix/store/060xpczv2c9x5hgakvrjlahacppygag6-gcc-wrapper-13.2.0"
-        },
-        "x86_64-darwin": {
-          "store_path": "/nix/store/2bf9nr233drw86z518pakcqkwm3vqhyj-gcc-wrapper-13.2.0"
-        },
-        "x86_64-linux": {
-          "store_path": "/nix/store/3779srln4c6qfgvdx09nx3qawwxswmaa-gcc-wrapper-13.2.0"
-        }
-      }
-    },
     "gnumake@latest": {
       "last_modified": "2023-09-27T18:02:17Z",
       "resolved": "github:NixOS/nixpkgs/517501bcf14ae6ec47efd6a17dda0ca8e6d866f9#gnumake",
       "source": "devbox-search",
-      "version": "4.4.1",
-      "systems": {
-        "aarch64-darwin": {
-          "store_path": "/nix/store/221p2yp3dlb6dxr93iidq4gpx9i25n81-gnumake-4.4.1"
-        },
-        "aarch64-linux": {
-          "store_path": "/nix/store/7j6z1qfnwbl6ixa7gwki112hp1rk7f55-gnumake-4.4.1"
-        },
-        "x86_64-darwin": {
-          "store_path": "/nix/store/gy3qhhljpwjhmn6s4l2hnwh1nwg0p779-gnumake-4.4.1"
-        },
-        "x86_64-linux": {
-          "store_path": "/nix/store/5rdxplg3cczslq4banvk3449ry5k9hx7-gnumake-4.4.1"
-        }
-      }
+      "version": "4.4.1"
     },
     "poetry@latest": {
       "last_modified": "2023-10-04T02:19:08Z",
-      "plugin_version": "0.0.3",
+      "plugin_version": "0.0.2",
       "resolved": "github:NixOS/nixpkgs/d1c9180c6d1f8fce9469436f48c1cb8180d7087d#poetry",
       "source": "devbox-search",
       "version": "1.6.1",
