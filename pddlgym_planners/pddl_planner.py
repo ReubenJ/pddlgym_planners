@@ -64,6 +64,7 @@ class PDDLPlanner(Planner):
             run_result = subprocess.run(cmd_str, capture_output=True, timeout=timeout)
         except TimeoutExpired:
             raise PlanningTimeout("Planning timed out!")
+        run_result.check_returncode()
         output = run_result.stdout.decode()
         if remove_files:
             os.remove(dom_file)
@@ -82,6 +83,7 @@ class PDDLPlanner(Planner):
             run_result = subprocess.run(cmd_str, capture_output=True, timeout=timeout)
         except TimeoutExpired:
             raise PlanningTimeout("Planning timed out!")
+        run_result.check_returncode()
         output = run_result.stdout.decode()
         self._cleanup()
         pddl_plan = self._output_to_plan(output)

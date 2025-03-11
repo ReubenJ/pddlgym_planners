@@ -33,7 +33,7 @@ class FD(PDDLPlanner):
     def _get_cmd_str(self, dom_file, prob_file):
         sas_file = tempfile.NamedTemporaryFile(delete=False).name
         cmd_str = [
-            self._exec, self._alias_flag, "--sas-file",
+            self._exec, *self._alias_flag.split(), "--sas-file",
             sas_file, dom_file, prob_file, *self._final_flags
         ]
 
@@ -41,7 +41,7 @@ class FD(PDDLPlanner):
 
     def _get_cmd_str_searchonly(self, sas_file):
         cmd_str = [
-            self._exec, self._alias_flag, "--search", sas_file, *self._final_flags
+            self._exec, *self._alias_flag.split(), "--search", sas_file, *self._final_flags
         ]
 
         return cmd_str
