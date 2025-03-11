@@ -6,3 +6,6 @@ FD/
 __pycache__/
 *.py[cod]
 *$py.class
+# pixi environments
+.pixi
+*.egg-info
