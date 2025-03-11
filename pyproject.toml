@@ -6,7 +6,7 @@ authors = [
 description = "PDDL planner interface for PDDLGym."
 name = "pddlgym_planners"
 requires-python = ">= 3.6"
-version = "0.0.2"
+version = "0.0.3"
 dependencies = ["pddlgym @ https://github.com/ReubenJ/pddlgym.git"]
 
 [build-system]
