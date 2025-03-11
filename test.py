@@ -16,7 +16,7 @@ def test_planners():
         for env_name in env_names:
             env = pddlgym.make(env_name)
             state, _ = env.reset()
-            plan = planner(env.domain, state)
+            plan = planner(env.env.domain, state)
             for act in plan:
                 _, reward, done, _, _ = env.step(act)
             assert reward == 1.
@@ -29,21 +29,21 @@ def test_readme_example():
     ff_planner = FF()
     env = pddlgym.make("PDDLEnvBlocks-v0")
     state, _ = env.reset()
-    print("Plan:", ff_planner(env.domain, state))
+    print("Plan:", ff_planner(env.env.domain, state))
     print("Statistics:", ff_planner.get_statistics())
 
     # Planning with FastDownward (--alias seq-opt-lmcut)
     fd_planner = FD()
     env = pddlgym.make("PDDLEnvBlocks-v0")
     state, _ = env.reset()
-    print("Plan:", fd_planner(env.domain, state))
+    print("Plan:", fd_planner(env.env.domain, state))
     print("Statistics:", fd_planner.get_statistics())
 
     # Planning with FastDownward (--alias lama-first)
     lama_first_planner = FD(alias_flag="--alias lama-first")
     env = pddlgym.make("PDDLEnvBlocks-v0")
     state, _ = env.reset()
-    print("Plan:", lama_first_planner(env.domain, state))
+    print("Plan:", lama_first_planner(env.env.domain, state))
     print("Statistics:", lama_first_planner.get_statistics())
 
 
