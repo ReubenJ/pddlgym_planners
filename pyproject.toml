@@ -1,0 +1,29 @@
+[project]
+authors = [
+    { name = "Tom Silver", email = "tslvr@mit.edu" },
+    { name = "Rohan Chitnis", email = "ronuchit@gmail.com" },
+]
+description = "PDDL planner interface for PDDLGym."
+name = "pddlgym_planners"
+requires-python = ">= 3.6"
+version = "0.0.2"
+dependencies = ["pddlgym>=0.0.6,<0.0.7"]
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["osx-arm64"]
+
+[tool.pixi.pypi-dependencies]
+pddlgym_planners = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+
+[tool.pixi.dependencies]
+pillow = ">=11.1.0,<12"
+numpy = ">=2.2.3,<3"
+coreutils = ">=9.5,<10"
+cmake = ">=3.31.6,<4"
