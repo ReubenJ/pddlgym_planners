@@ -4,6 +4,7 @@ https://fai.cs.uni-saarland.de/hoffmann/ff.html
 
 import re
 import os
+import shutil
 import sys
 from pddlgym_planners.pddl_planner import PDDLPlanner
 from pddlgym_planners.planner import PlanningFailure
@@ -24,7 +25,7 @@ class FF(PDDLPlanner):
             self._install_ff()
 
     def _get_cmd_str(self, dom_file, prob_file, timeout):
-        timeout_cmd = "gtimeout" if sys.platform == "darwin" else "timeout"
+        timeout_cmd = "gtimeout" if shutil.which("gtimeout") else "timeout"
         cmd_str = "{} {} {} -o {} -f {}".format(
             timeout_cmd, timeout, self._exec, dom_file, prob_file)
         return cmd_str
