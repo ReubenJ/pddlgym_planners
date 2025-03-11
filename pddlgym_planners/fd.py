@@ -4,7 +4,6 @@ http://www.fast-downward.org/ObtainingAndRunningFastDownward
 
 import re
 import os
-import shutil
 import subprocess
 import tempfile
 from pddlgym_planners.pddl_planner import PDDLPlanner
@@ -31,19 +30,20 @@ class FD(PDDLPlanner):
         if not os.path.exists(self._exec):
             self._install_fd()
 
-    def _get_cmd_str(self, dom_file, prob_file, timeout):
+    def _get_cmd_str(self, dom_file, prob_file):
         sas_file = tempfile.NamedTemporaryFile(delete=False).name
-        timeout_cmd = "gtimeout" if shutil.which("gtimeout") else "timeout"
-        cmd_str = "{} {} {} {} --sas-file {} {} {} {}".format(
-            timeout_cmd, timeout, self._exec, self._alias_flag, sas_file,
-            dom_file, prob_file, self._final_flags)
+        cmd_str = [
+            self._exec, self._alias_flag, "--sas-file",
+            sas_file, dom_file, prob_file, *self._final_flags
+        ]
+
         return cmd_str
 
-    def _get_cmd_str_searchonly(self, sas_file, timeout):
-        timeout_cmd = "gtimeout" if shutil.which("gtimeout") else "timeout"
-        cmd_str = "{} {} {} {} --search {} {}".format(
-            timeout_cmd, timeout, self._exec, self._alias_flag,
-            sas_file, self._final_flags)
+    def _get_cmd_str_searchonly(self, sas_file):
+        cmd_str = [
+            self._exec, self._alias_flag, "--search", sas_file, *self._final_flags
+        ]
+
         return cmd_str
 
     def _cleanup(self):

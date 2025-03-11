@@ -24,13 +24,12 @@ class FF(PDDLPlanner):
         if not os.path.exists(self._exec):
             self._install_ff()
 
-    def _get_cmd_str(self, dom_file, prob_file, timeout):
-        timeout_cmd = "gtimeout" if shutil.which("gtimeout") else "timeout"
-        cmd_str = "{} {} {} -o {} -f {}".format(
-            timeout_cmd, timeout, self._exec, dom_file, prob_file)
+    def _get_cmd_str(self, dom_file, prob_file):
+        cmd_str = [self._exec, "-o", dom_file, "-f", prob_file]
+
         return cmd_str
 
-    def _get_cmd_str_searchonly(self, sas_file, timeout):
+    def _get_cmd_str_searchonly(self, sas_file):
         raise NotImplementedError("Cannot run translate_separately=True for FF")
 
     def _output_to_plan(self, output):
