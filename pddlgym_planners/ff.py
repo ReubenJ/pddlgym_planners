@@ -4,7 +4,7 @@ https://fai.cs.uni-saarland.de/hoffmann/ff.html
 
 import re
 import os
-import shutil
+import subprocess
 import sys
 from pddlgym_planners.pddl_planner import PDDLPlanner
 from pddlgym_planners.planner import PlanningFailure
@@ -75,13 +75,13 @@ class FF(PDDLPlanner):
         loc = os.path.dirname(self._exec)
         if sys.platform == "darwin":
             # Install FF patched for Mac.
-            os.system("git clone {} {}".format(FF_MAC_URL, loc))
+            subprocess.run(["git", "clone", FF_MAC_URL, loc])
         else:
             # Install FF directly from official website.
-            os.system("curl {} --output temp_ff_install.tgz".format(FF_URL))
-            os.system("mkdir {}".format(loc))
-            os.system("tar -xzvf temp_ff_install.tgz -C {} --strip-components 1".format(loc))
-            os.system("rm temp_ff_install.tgz")
+            subprocess.run(["curl", FF_URL, "--output", "temp_ff_install.tgz"])
+            subprocess.run(["mkdir", loc])
+            subprocess.run(["tar", "-xzvf", "temp_ff_install.tgz", "-C", loc, "--strip-components", "1"])
+            subprocess.run(["rm", "temp_ff_install.tgz"])
         # Compile FF.
-        os.system("cd {} && make && cd -".format(loc))
+        subprocess.run("make", cwd=loc)
         assert os.path.exists(self._exec)

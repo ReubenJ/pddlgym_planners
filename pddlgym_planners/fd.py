@@ -106,6 +106,6 @@ class FD(PDDLPlanner):
     def _install_fd(self):
         loc = os.path.dirname(self._exec)
         # Install and compile FD.
-        os.system("git clone {} {}".format(FD_URL, loc))
-        os.system("cd {} && ./build.py && cd -".format(loc))
+        subprocess.run(["git", "clone", FD_URL, loc], check=True)
+        subprocess.run("./build.py", cwd=loc)
         assert os.path.exists(self._exec)
