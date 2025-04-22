@@ -62,7 +62,7 @@ class PDDLPlanner(Planner):
         cmd_str = self._get_cmd_str(dom_file, prob_file)
         try:
             run_result = subprocess.run(cmd_str, capture_output=True, timeout=timeout)
-        except TimeoutExpired:
+        except subprocess.TimeoutExpired:
             raise PlanningTimeout("Planning timed out!")
         run_result.check_returncode()
         output = run_result.stdout.decode()
@@ -81,7 +81,7 @@ class PDDLPlanner(Planner):
         cmd_str = self._get_cmd_str_searchonly(sas_file)
         try:
             run_result = subprocess.run(cmd_str, capture_output=True, timeout=timeout)
-        except TimeoutExpired:
+        except subprocess.TimeoutExpired:
             raise PlanningTimeout("Planning timed out!")
         run_result.check_returncode()
         output = run_result.stdout.decode()
